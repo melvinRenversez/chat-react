@@ -1,39 +1,15 @@
-const App = () =>{
-          
-          const name = "melvin";
+import List from "./components/list/List";
+import Chat from "./components/chat/Chat";
+import Detail from "./components/detail/Detail";
 
-          let elements = [];
-
-          for (let i = 0; i < 10; i++) {
-                    elements.push("Element " + i);
-          }
-
-          return (
-                    <div>
-                              <h1>🚀 Projet JSX pur</h1>
-                              <p>Ceci est une application React de base.</p>
-                              <p>Bonjour {name}!</p>
-
-
-                              <ul>
-
-                                        {
-
-                                                  elements.map((item, index) => (
-                                                            <li key={index}>{item}</li>
- 
-                                                  ))
-
-                                        }
-
-                              </ul>
-
-
-                  </div>
-
-                  
-                    
-          )
+const App = () => {
+  return (
+    <div className='container'>
+      <List />
+      <Chat />
+      <Detail />
+    </div>
+  )
 }
 
-export default App;
+export default App
